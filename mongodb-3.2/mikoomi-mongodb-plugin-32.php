@@ -205,7 +205,7 @@ write_to_data_lines($zabbix_name, "connections.current", $connections_current) ;
 $connections_available = $server_status['connections']['available'] ;
 write_to_data_lines($zabbix_name, "connections.available", $connections_available) ;
 
-$extra_info_heap_usage = round(($server_status['extra_info']['heap_usage_bytes'])/(1024*124), 2) ;
+$extra_info_heap_usage = round(($server_status['extra_info']['heap_usage_bytes'])/(1024*1024), 2) ;
 write_to_data_lines($zabbix_name, "extra_info.heap_usage", $extra_info_heap_usage) ;
 
 $extra_info_page_faults = $server_status['extra_info']['page_faults'];
